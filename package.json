@@ -1,0 +1,24 @@
+{
+  "name": "lacasa.co.nz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass scss/index.scss public/style.css",
+    "build:watch": "sass --watch scss/index.scss public/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinvos/lacasa.co.nz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justinvos/lacasa.co.nz/issues"
+  },
+  "homepage": "https://github.com/justinvos/lacasa.co.nz#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
