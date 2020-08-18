@@ -51,14 +51,7 @@
   }
 }
 
-.nav__item--phone {
-  display: block;
-  @media (min-width: settings.$tablet) {
-    display: none;
-  }
-}
-
-.nav__item--contact, .nav__item--portal {
+.nav__item--portal {
   display: none;
   @media (min-width: settings.$tablet) {
     display: block;
