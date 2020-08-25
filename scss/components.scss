@@ -57,6 +57,20 @@
   }
 }
 
+.main--landing {
+  margin-top: 68px;
+  padding-top: 270px;
+  position: relative;
+
+  @media (min-width: settings.$tablet) {
+    padding-top: 450px;
+  }
+
+  @media (min-width: settings.$desktop) {
+    padding-top: 600px;
+  }
+}
+
 .section--hero {
   align-items: center;
   background-image: url('assets/hero.jpg');

@@ -40,20 +40,6 @@ button {
   }
 }
 
-main {
-  margin-top: 68px;
-  padding-top: 270px;
-  position: relative;
-
-  @media (min-width: settings.$tablet) {
-    padding-top: 450px;
-  }
-
-  @media (min-width: settings.$desktop) {
-    padding-top: 600px;
-  }
-}
-
 footer {
   background-color: settings.$white;
   padding: 40px 16px;
