@@ -162,8 +162,11 @@
 }
 
 .section--services {
+  align-items: center;
   background-color: white;
-  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 16px 0;
 }
 
 .services__heading {
@@ -184,31 +187,40 @@
 }
 
 .cards {
-  @media (min-width: settings.$desktop) {
+  @media (min-width: settings.$tablet) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px;
+    max-width: 1398px;
   }
 }
 
 .card {
   margin-top: 40px;
-  max-width: 430px;
+  max-width: 418px;
 
-  @media (min-width: settings.$desktop) {
+  @media (min-width: settings.$tablet) {
     flex-shrink: 0;
     margin-right: 36px;
-    width: 430px;
+    width: 260px;
+  }
+
+  @media (min-width: settings.$desktop) {
+    width: 418px;
   }
 }
 
 .card:first-of-type {
   margin-top: 0;
+  @media (min-width: settings.$tablet) {
+    margin-top: 40px;
+  }
 }
 
 .card:last-of-type {
-  @media (min-width: settings.$desktop) {
+  @media (min-width: settings.$tablet) {
     margin-right: 0;
   }
 }
@@ -237,8 +249,97 @@
   line-height: 22px;
   margin-top: 32px;
 
-  @media (min-width: settings.$tablet) {
+  @media (min-width: settings.$desktop) {
     font-size: 24px;
     line-height: 34px;
   }
+}
+
+.section--pricing {
+  align-items: center;
+  background-color: settings.$white;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 16px 0;
+}
+
+.pricing__heading {
+  font-size: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: settings.$tablet) {
+    font-size: 24px;
+  }
+
+  @media (min-width: settings.$desktop) {
+    font-size: 28px;
+    margin-top: 80px;
+  }
+}
+
+.pricing__text {
+  font-size: 24px;
+  margin-top: 40px;
+  text-align: center;
+
+  @media (min-width: settings.$desktop) {
+    font-size: 64px;
+    max-width: 800px;
+  }
+}
+
+.pricing__cta {
+  margin-top: 40px;
+
+  @media (min-width: settings.$desktop) {
+    margin-top: 80px;
+  }
+}
+
+.footer__content {
+  @media (min-width: settings.$tablet) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+  }
+}
+
+.footer__contact {
+  margin-top: 48px;
+
+  @media (min-width: settings.$tablet) {
+    margin: 0;
+  }
+}
+
+.footer__label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer__row {
+  align-items: center;
+  display: flex;
+  margin-top: 16px;
+
+  &:first-of-type {
+    margin-top: 20px;
+  }
+}
+
+.footer__rowText {
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.footer__mail {
+  margin-top: 24px;
+
+  @media (min-width: settings.$tablet) {
+    margin: 0;
+  }
+}
+
+.footer__mailAddress {
+  margin-top: 20px;
 }
