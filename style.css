@@ -1,4 +1,80 @@
-@use "settings";
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  margin: 0;
+}
+
+:root {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+hr {
+  border: none;
+  border-top: #979797 solid 1px;
+}
+
+button {
+  background-color: #3483D2;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  height: 56px;
+  width: 222px;
+}
+button:hover {
+  background-color: #2E73B8;
+}
+
+footer {
+  background-color: #FFFFFF;
+  padding: 40px 16px;
+}
+@media (min-width: 940px) {
+  footer {
+    margin: 0 auto;
+    padding: 96px 0 40px;
+    width: 872px;
+  }
+}
+
+/*
+.section--tagline {
+  background-color: #F5F5F5;
+  padding: 16px;
+}
+
+.tagline__text {
+  color: #333333;
+  line-height: 1.4;
+  text-align: center;
+}
+*/
+.highlight {
+  background-color: #3e96d8;
+  padding: 0 8px;
+}
 
 .header {
   align-items: center;
@@ -20,7 +96,7 @@
 }
 
 .header__title {
-  color: settings.$off-black;
+  color: #333333;
   font-size: 24px;
   font-weight: 700;
   line-height: 1em;
@@ -41,18 +117,19 @@
 }
 
 .nav__item {
-  color: settings.$primary;
+  color: #3483D2;
   cursor: pointer;
   margin-left: 16px;
-
-  &:hover {
-    text-decoration: underline;
-  }
+}
+.nav__item:hover {
+  text-decoration: underline;
 }
 
 .nav__item--portal {
   display: none;
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .nav__item--portal {
     display: block;
   }
 }
@@ -61,19 +138,21 @@
   margin-top: 68px;
   padding-top: 270px;
   position: relative;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .main--landing {
     padding-top: 450px;
   }
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .main--landing {
     padding-top: 600px;
   }
 }
 
 .section--hero {
   align-items: center;
-  background-image: url('assets/hero.jpg');
+  background-image: url("assets/hero.jpg");
   background-position: center center;
   background-size: cover;
   display: flex;
@@ -83,94 +162,106 @@
   top: 68px;
   width: 100%;
   z-index: -1;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .section--hero {
     height: 450px;
   }
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .section--hero {
     height: 600px;
   }
 }
 
 .hero__title {
-  color: settings.$white;
+  color: #FFFFFF;
   font-size: 28px;
   font-weight: 700;
   text-align: center;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .hero__title {
     font-size: 48px;
   }
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .hero__title {
     font-size: 64px;
   }
 }
 
 .section--note {
-  background-color: settings.$light-gray;
+  background-color: #F5F5F5;
   font-size: 16px;
   padding: 16px;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .section--note {
     padding: 20px 16px;
   }
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .section--note {
     padding: 24px 16px;
   }
 }
 
 .note__text {
-  color: settings.$black;
+  color: #1D1D1D;
   font-size: 16px;
   text-align: center;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .note__text {
     font-size: 20px;
   }
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .note__text {
     font-size: 24px;
   }
 }
 
 .section--about {
-  background-color: settings.$white;
+  background-color: #FFFFFF;
   padding: 40px 16px;
 }
 
 .about__heading {
-  color: settings.$black;
+  color: #1D1D1D;
   font-size: 20px;
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .about__heading {
     font-size: 24px;
   }
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .about__heading {
     font-size: 28px;
     margin-top: 40px;
   }
 }
 
 .about__text {
-  color: settings.$black;
+  color: #1D1D1D;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4em;
   margin: 40px auto;
   max-width: 800px;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .about__text {
     font-size: 20px;
   }
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .about__text {
     font-size: 24px;
   }
 }
@@ -184,24 +275,26 @@
 }
 
 .services__heading {
-  color: settings.$black;
+  color: #1D1D1D;
   font-size: 20px;
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .services__heading {
     font-size: 24px;
   }
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .services__heading {
     font-size: 28px;
     margin-top: 40px;
   }
 }
 
-.cards {
-  @media (min-width: settings.$tablet) {
+@media (min-width: 640px) {
+  .cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -214,27 +307,31 @@
 .card {
   margin-top: 40px;
   max-width: 418px;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .card {
     flex-shrink: 0;
     margin-right: 36px;
     width: 260px;
   }
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .card {
     width: 418px;
   }
 }
 
 .card:first-of-type {
   margin-top: 0;
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .card:first-of-type {
     margin-top: 40px;
   }
 }
 
-.card:last-of-type {
-  @media (min-width: settings.$tablet) {
+@media (min-width: 640px) {
+  .card:last-of-type {
     margin-right: 0;
   }
 }
@@ -244,26 +341,28 @@
 }
 
 .card__title {
-  color: settings.$black;
+  color: #1D1D1D;
   font-size: 18px;
   font-weight: 700;
   margin-top: 32px;
   text-align: center;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .card__title {
     font-size: 24px;
     margin-top: 44px;
   }
 }
 
 .card__text {
-  color: settings.$black;
+  color: #1D1D1D;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   margin-top: 32px;
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .card__text {
     font-size: 24px;
     line-height: 34px;
   }
@@ -271,7 +370,7 @@
 
 .section--pricing {
   align-items: center;
-  background-color: settings.$white;
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
   padding: 40px 16px 0;
@@ -280,12 +379,14 @@
 .pricing__heading {
   font-size: 20px;
   text-transform: uppercase;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .pricing__heading {
     font-size: 24px;
   }
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .pricing__heading {
     font-size: 28px;
     margin-top: 80px;
   }
@@ -295,8 +396,9 @@
   font-size: 24px;
   margin-top: 40px;
   text-align: center;
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .pricing__text {
     font-size: 64px;
     max-width: 800px;
   }
@@ -304,14 +406,15 @@
 
 .pricing__cta {
   margin-top: 40px;
-
-  @media (min-width: settings.$desktop) {
+}
+@media (min-width: 940px) {
+  .pricing__cta {
     margin-top: 80px;
   }
 }
 
-.footer__content {
-  @media (min-width: settings.$tablet) {
+@media (min-width: 640px) {
+  .footer__content {
     display: flex;
     justify-content: space-between;
     margin-top: 48px;
@@ -320,8 +423,9 @@
 
 .footer__contact {
   margin-top: 48px;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .footer__contact {
     margin: 0;
   }
 }
@@ -335,10 +439,9 @@
   align-items: center;
   display: flex;
   margin-top: 16px;
-
-  &:first-of-type {
-    margin-top: 20px;
-  }
+}
+.footer__row:first-of-type {
+  margin-top: 20px;
 }
 
 .footer__rowText {
@@ -348,8 +451,9 @@
 
 .footer__mail {
   margin-top: 24px;
-
-  @media (min-width: settings.$tablet) {
+}
+@media (min-width: 640px) {
+  .footer__mail {
     margin: 0;
   }
 }
@@ -357,3 +461,5 @@
 .footer__mailAddress {
   margin-top: 20px;
 }
+
+/*# sourceMappingURL=style.css.map */
