@@ -466,4 +466,72 @@ footer {
   margin-top: 20px;
 }
 
+.section--miniHero {
+  align-items: center;
+  background-image: url('assets/hero.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 100px;
+  margin-top: 68px;
+  padding: 24px;
+}
+
+.miniHero__heading {
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.section--contact {
+  padding: 32px 24px;
+}
+
+.contact__heading {
+  font-size: 36px;
+}
+
+.row {
+  display: flex;
+  margin-top: 24px;
+}
+
+.row__text {
+  margin-left: 16px;
+}
+
+.contact__photo {
+  margin-top: 48px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .section--contact {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact__photo {
+    margin-top: 0;
+    width: 43.5%;
+  }
+}
+
+@media (min-width: 948px) {
+  .miniHero__heading {
+    margin: 0 auto;
+    width: 900px;
+  }
+
+  .section--contact {
+    margin: 0 auto;
+    padding: 32px 0;
+    width: 900px;
+  }
+
+  .contact__photo {
+    width: 392px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
