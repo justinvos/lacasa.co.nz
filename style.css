@@ -49,14 +49,6 @@ button:hover {
 
 footer {
   background-color: #FFFFFF;
-  padding: 40px 16px;
-}
-@media (min-width: 940px) {
-  footer {
-    margin: 0 auto;
-    padding: 96px 0 40px;
-    width: 872px;
-  }
 }
 
 /*
@@ -410,6 +402,18 @@ footer {
 @media (min-width: 940px) {
   .pricing__cta {
     margin-top: 80px;
+  }
+}
+
+.footer__container {
+  padding: 40px 16px;
+}
+
+@media (min-width: 940px) {
+  .footer__container {
+    margin: 0 auto;
+    padding: 96px 0 40px;
+    width: 872px;
   }
 }
 
